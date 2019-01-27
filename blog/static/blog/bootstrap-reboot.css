@@ -43,10 +43,15 @@ nav ul {
   display: inline-block;
 }
 
-nav li {
-  
+header {
+  margin-top: 10%;
+  margin-left:15%;
+  margin-bottom: -7.5%;
 }
 
+header h1 {
+  font-size: 3rem;
+}
 main {
   float:left;
   width:75%;
@@ -58,6 +63,18 @@ main li {
   margin-bottom: 10%;
   font-size:1.5rem;
   border-bottom: 1px solid;
+}
+
+main p {
+  margin-left: 3.5%;
+  font-size: 1.25rem;
+}
+
+main input {
+  margin-left: 3.5%;
+  border-radius: 25px;
+  background-color: #cee9ea;
+  border-color: #212529;
 }
 
 body {
