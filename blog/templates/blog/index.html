@@ -1,14 +1,24 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'blog/bootstrap-reboot.css' %}">
+</head>
+    <nav>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="/blog/creation"> Create a Post! </a></li>
+        </ul>
+    </nav>
 
-{% if post_list %}
-    <ul>
-    {% for post in post_list %}
-        <li><a href="/blog/{{ post.id }}/">{{ post.title }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No posts are available.</p>
-{% endif %}
-
-<form action="/blog/creation">
-    <input type="submit" value="Create a Post!" />
-</form>
+    <main>
+        {% if post_list %}
+            <ul>
+            {% for post in post_list %}
+                <li><a href="/blog/{{ post.id }}/">{{ post.title }} - Written by: {{ post.author.author_name }} </a>
+                <h5>Written on: {{post.creation_date}}</h5></li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No posts are available.</p>
+        {% endif %}
+    </main>
