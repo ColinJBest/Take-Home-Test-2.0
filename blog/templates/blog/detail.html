@@ -1,0 +1,16 @@
+<h2>
+    {{ post.title }}
+</h2>
+<h3>
+    Written By: {{post.author}}
+</h3>
+<p>
+    Posted On: {{post.creation_date}}
+</p>
+<p> 
+    {{post.description}}
+</p>
+
+<form action="/blog/{{ post.id }}/edit">
+    <input type="submit" value="Edit this Post!" />
+</form>
